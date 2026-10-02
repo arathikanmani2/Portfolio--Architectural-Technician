@@ -868,3 +868,162 @@ code{
         aspect-ratio:1 / 1
     }
 }
+/* =========================================================
+   ARCHITECTURAL PROJECTS LANDING PAGE
+   ========================================================= */
+
+.project-list-hero{
+    padding:11vw 8vw 8vw;
+    border-bottom:1px solid var(--line);
+}
+
+.project-list-hero h1{
+    font-family:Manrope,Arial,sans-serif;
+    font-size:clamp(58px,8vw,110px);
+    line-height:.94;
+    letter-spacing:-.055em;
+    margin:0 0 35px;
+}
+
+.project-list-hero h1 em{
+    font-style:normal;
+    color:#777;
+}
+
+.project-list-hero > p:last-child{
+    max-width:650px;
+    font-size:18px;
+    color:#555;
+    margin:0;
+}
+
+
+/* PROJECT LIST */
+
+.architectural-projects{
+    padding:6vw 6vw 10vw;
+}
+
+.architectural-project-card{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:6vw;
+    padding:7vw 2vw;
+    border-bottom:1px solid var(--line);
+}
+
+.architectural-project-card:first-child{
+    padding-top:2vw;
+}
+
+.architectural-project-card:hover
+.architectural-project-image img{
+    transform:scale(1.015);
+}
+
+.architectural-project-image{
+    overflow:hidden;
+    background:#dedbd4;
+}
+
+.architectural-project-image img{
+    width:100%;
+    height:560px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.architectural-project-info{
+    display:grid;
+    grid-template-columns:1fr;
+    align-content:space-between;
+    padding:10px 0 5px;
+}
+
+.project-number{
+    display:block;
+    font-family:Manrope,Arial,sans-serif;
+    font-size:14px;
+    color:var(--accent);
+    margin-bottom:45px;
+}
+
+.architectural-project-info .eyebrow{
+    margin-bottom:15px;
+}
+
+.architectural-project-info h2{
+    font-family:Manrope,Arial,sans-serif;
+    font-size:clamp(42px,5vw,72px);
+    letter-spacing:-.045em;
+    margin:0;
+}
+
+.architectural-project-description{
+    max-width:480px;
+}
+
+.architectural-project-description p{
+    font-size:17px;
+    color:#555;
+    margin:0 0 30px;
+}
+
+.project-view{
+    font-size:13px;
+    font-weight:600;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:5px;
+}
+
+.architectural-project-card:hover .project-view{
+    color:var(--accent);
+    border-color:var(--accent);
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .project-list-hero{
+        padding:18vw 7vw 14vw;
+    }
+
+    .project-list-hero h1{
+        font-size:clamp(55px,16vw,85px);
+    }
+
+    .project-list-hero > p:last-child{
+        font-size:16px;
+    }
+
+    .architectural-projects{
+        padding:5vw 7vw 18vw;
+    }
+
+    .architectural-project-card,
+    .architectural-project-card:first-child{
+        grid-template-columns:1fr;
+        gap:35px;
+        padding:14vw 0;
+    }
+
+    .architectural-project-image img{
+        height:380px;
+    }
+
+    .project-number{
+        margin-bottom:30px;
+    }
+
+    .architectural-project-info h2{
+        font-size:48px;
+    }
+
+    .architectural-project-description p{
+        font-size:16px;
+    }
+
+}
