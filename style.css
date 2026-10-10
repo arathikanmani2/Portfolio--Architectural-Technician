@@ -1299,4 +1299,352 @@ code{
         padding:18vw 7vw;
     }
 
+}```css
+/* =========================================================
+   ATHERTON GROVE PROJECT PAGE
+   ========================================================= */
+
+.ag-hero {
+    padding: 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7vw;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
 }
+
+.ag-hero h1 {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: clamp(64px, 8vw, 112px);
+    line-height: .92;
+    letter-spacing: -.06em;
+    margin: 0 0 25px;
+}
+
+.ag-hero h1 em {
+    font-style: normal;
+    color: #777;
+}
+
+.ag-location {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.ag-hero .lead {
+    font-size: 18px;
+}
+
+.ag-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    font-size: 10px;
+    letter-spacing: .1em;
+    color: #555;
+}
+
+.ag-status-dot {
+    width: 7px;
+    height: 7px;
+    background: #78866b;
+    border-radius: 50%;
+    flex: 0 0 7px;
+}
+
+.ag-hero-image {
+    min-width: 0;
+}
+
+.ag-hero-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    background: #dedbd4;
+}
+
+.ag-hero-image > p {
+    font-size: 10px;
+    color: #777;
+    margin-top: 12px;
+}
+
+.ag-meta-section {
+    padding: 5vw 8vw;
+    border-bottom: 1px solid var(--line);
+}
+
+.ag-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 40px;
+    margin-top: 30px;
+}
+
+.ag-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.ag-meta-item span {
+    font-size: 9px;
+    letter-spacing: .14em;
+    color: var(--accent);
+}
+
+.ag-meta-item strong {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ag-intro {
+    padding: 9vw 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    border-bottom: 1px solid var(--line);
+}
+
+.ag-intro h2,
+.ag-contribution h2,
+.ag-gallery-heading h2,
+.ag-project-end h2 {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 1.03;
+    letter-spacing: -.045em;
+    margin: 0;
+}
+
+.ag-body-copy p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #555;
+    margin: 0 0 24px;
+}
+
+.ag-body-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.ag-contribution {
+    padding: 9vw 8vw;
+    background: #e8e5de;
+}
+
+.ag-contribution h2 {
+    max-width: 760px;
+}
+
+.ag-contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 65px;
+}
+
+.ag-contribution-grid article {
+    padding-top: 20px;
+    border-top: 1px solid #b8b4ac;
+}
+
+.ag-contribution-grid article > span {
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.ag-contribution-grid h3 {
+    font: 600 19px Manrope, Arial, sans-serif;
+    margin: 22px 0 12px;
+}
+
+.ag-contribution-grid p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.ag-gallery-section {
+    padding: 9vw 8vw;
+}
+
+.ag-gallery-heading {
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    gap: 6vw;
+    align-items: end;
+    margin-bottom: 50px;
+}
+
+.ag-gallery-heading > p {
+    font-size: 15px;
+    color: #666;
+    max-width: 440px;
+    margin: 0 0 5px;
+}
+
+.ag-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 28px;
+}
+
+.ag-gallery figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.ag-gallery figure.ag-gallery-featured {
+    grid-column: span 2;
+}
+
+.ag-gallery img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    background: #dedbd4;
+}
+
+.ag-gallery-featured img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.ag-gallery figcaption {
+    margin-top: 13px;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.ag-gallery-note {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #777;
+    margin-top: 40px;
+}
+
+.ag-project-end {
+    padding: 9vw 8vw;
+    border-top: 1px solid var(--line);
+}
+
+.ag-project-end h2 {
+    margin-bottom: 45px;
+}
+
+.ag-end-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 40px;
+}
+
+.ag-end-links a {
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 6px;
+}
+
+.ag-end-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+@media (max-width: 750px) {
+
+    .ag-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 18vw 7vw;
+    }
+
+    .ag-hero h1 {
+        font-size: clamp(62px, 17vw, 88px);
+    }
+
+    .ag-hero .lead {
+        font-size: 16px;
+    }
+
+    .ag-hero-image img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .ag-meta-section,
+    .ag-intro,
+    .ag-contribution,
+    .ag-gallery-section,
+    .ag-project-end {
+        padding: 16vw 7vw;
+    }
+
+    .ag-meta-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 18px;
+    }
+
+    .ag-intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .ag-contribution-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 22px;
+        margin-top: 45px;
+    }
+
+    .ag-gallery-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .ag-gallery {
+        gap: 32px 16px;
+    }
+
+    .ag-gallery img {
+        height: 220px;
+    }
+
+    .ag-gallery-featured img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .ag-end-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .ag-contribution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ag-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .ag-gallery figure.ag-gallery-featured {
+        grid-column: auto;
+    }
+
+    .ag-gallery img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+```
+
