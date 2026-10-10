@@ -1298,58 +1298,96 @@ code{
     .sylvia-project-close{
         padding:18vw 7vw;
     }
+}
 
-/* ==========================================
-   ATHERTON GROVE — LAYOUT OVERRIDE
-   Append to the VERY END of style.css
-========================================== */
+/* =========================================================
+   ATHERTON GROVE PROJECT PAGE
+   ========================================================= */
 
-/* Keep the main image beside the project text */
+/* Project title and project information on the left;
+   main project image aligned on the right. */
 .ag-page .ag-hero {
-    display: grid !important;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 40px;
-    padding: 55px 7% !important;
+    gap: clamp(28px, 5vw, 72px);
+    padding: 64px 7%;
+    width: 100%;
 }
 
 .ag-page .ag-hero-content {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
     width: 100%;
-    max-width: 440px;
+    max-width: 600px;
 }
 
 .ag-page .ag-hero-image {
-    width: 100%;
-    max-width: 600px;
+    grid-column: 2;
+    grid-row: 1;
     justify-self: end;
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
     margin: 0;
+    overflow: hidden;
+    background: #dedbd4;
 }
 
 .ag-page .ag-hero-image img {
     display: block;
     width: 100%;
-    height: 390px !important;
-    max-height: 390px;
+    height: clamp(280px, 34vw, 430px);
+    max-height: 430px;
     object-fit: cover;
 }
 
+/* Project description sits below the title/information and image. */
+.ag-page .ag-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 45px 7% 65px;
+    border-top: 1px solid var(--line);
+}
 
-/* Keep gallery to exactly 3 columns */
+.ag-page .ag-intro > *,
+.ag-page .ag-intro p {
+    max-width: 900px;
+}
+
+.ag-page .ag-intro p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.75;
+    margin: 0 0 18px;
+}
+
+/* Compact gallery: exactly three columns and two rows for six images. */
+.ag-page .ag-gallery-section {
+    padding: 60px 7% 75px;
+    border-top: 1px solid var(--line);
+}
+
+.ag-page .ag-gallery-heading {
+    margin: 0 0 28px;
+}
+
 .ag-page .ag-gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-flow: row;
-    gap: 24px 18px !important;
+    gap: 24px 18px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     align-items: start;
 }
 
-/* All six gallery images have equal size */
 .ag-page .ag-gallery figure,
 .ag-page .ag-gallery .ag-gallery-featured {
-    grid-column: auto !important;
+    grid-column: auto;
     width: 100%;
     min-width: 0;
     margin: 0;
@@ -1358,86 +1396,98 @@ code{
 .ag-page .ag-gallery figure img,
 .ag-page .ag-gallery .ag-gallery-featured img {
     display: block;
-    width: 100% !important;
-    height: 190px !important;
+    width: 100%;
+    height: 190px;
     max-height: 190px;
-    aspect-ratio: auto !important;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
-/* Consistent, compact captions */
 .ag-page .ag-gallery figure figcaption {
     display: flex;
     gap: 8px;
-    padding-top: 10px;
+    padding-top: 9px;
     font-size: 10px;
     line-height: 1.5;
+    color: #777;
 }
 
-
-/* Keep gallery section from becoming oversized */
-.ag-page .ag-gallery-section {
-    padding: 65px 7% !important;
+.ag-page .ag-project-end {
+    padding: 45px 7%;
 }
 
-.ag-page .ag-gallery-heading {
-    margin-bottom: 28px;
-}
-
-
-/* Tablet: still 3 columns where space allows */
+/* Tablet */
 @media (max-width: 900px) {
     .ag-page .ag-hero {
-        gap: 25px;
-        padding: 45px 5% !important;
+        gap: 28px;
+        padding: 48px 5%;
     }
 
     .ag-page .ag-hero-image img {
-        height: 310px !important;
-        max-height: 310px;
-    }
-
-    .ag-page .ag-gallery {
-        gap: 18px 12px !important;
-    }
-
-    .ag-page .ag-gallery figure img,
-    .ag-page .ag-gallery .ag-gallery-featured img {
-        height: 155px !important;
-        max-height: 155px;
+        height: 300px;
+        max-height: 300px;
     }
 
     .ag-page .ag-gallery-section {
-        padding: 50px 5% !important;
-    }
-}
-
-
-/* Mobile: stack hero, retain 3 gallery columns */
-@media (max-width: 600px) {
-    .ag-page .ag-hero {
-        grid-template-columns: minmax(0, 1fr) !important;
-        gap: 25px;
-        padding: 35px 6% !important;
-    }
-
-    .ag-page .ag-hero-image {
-        max-width: 100%;
-    }
-
-    .ag-page .ag-hero-image img {
-        height: 260px !important;
-        max-height: 260px;
+        padding: 48px 5%;
     }
 
     .ag-page .ag-gallery {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-        gap: 18px 8px !important;
+        gap: 18px 12px;
     }
 
     .ag-page .ag-gallery figure img,
     .ag-page .ag-gallery .ag-gallery-featured img {
-        height: 100px !important;
+        height: 155px;
+        max-height: 155px;
+    }
+}
+
+/* Mobile: stack the hero; keep the gallery in three columns. */
+@media (max-width: 600px) {
+    .ag-page .ag-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+        padding: 36px 6%;
+    }
+
+    .ag-page .ag-hero-content {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .ag-page .ag-hero-image {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: 100%;
+        justify-self: stretch;
+    }
+
+    .ag-page .ag-hero-image img {
+        height: 250px;
+        max-height: 250px;
+    }
+
+    .ag-page .ag-intro {
+        padding: 38px 6% 45px;
+    }
+
+    .ag-page .ag-intro p {
+        font-size: 15px;
+    }
+
+    .ag-page .ag-gallery-section {
+        padding: 38px 6% 48px;
+    }
+
+    .ag-page .ag-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px 8px;
+    }
+
+    .ag-page .ag-gallery figure img,
+    .ag-page .ag-gallery .ag-gallery-featured img {
+        height: 100px;
         max-height: 100px;
     }
 
@@ -1445,14 +1495,5 @@ code{
         display: block;
         font-size: 9px;
         overflow-wrap: anywhere;
-    }
-
-    .ag-page .ag-gallery figure figcaption span:first-child {
-        display: inline;
-        margin-right: 4px;
-    }
-
-    .ag-page .ag-gallery-section {
-        padding: 40px 6% !important;
     }
 }
