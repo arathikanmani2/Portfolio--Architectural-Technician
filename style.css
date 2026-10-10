@@ -1299,6 +1299,7 @@ code{
         padding:18vw 7vw;
     }
 
+
 /* =========================================
    ATHERTON GROVE — PROJECT PAGE
    Scoped styles to avoid affecting other pages
@@ -1324,7 +1325,7 @@ code{
 
 .ag-page img {
     display: block;
-    width: 50%;
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -2144,5 +2145,4 @@ code{
     .ag-page .ag-gallery figure figcaption {
         font-size: 8px;
     }
-}
 }
