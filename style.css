@@ -1299,340 +1299,104 @@ code{
         padding:18vw 7vw;
     }
 
-}```css
-/* =========================================================
-   ATHERTON GROVE PROJECT PAGE
-   ========================================================= */
 
+/* ATHERTON GROVE — COMPACT PROJECT LAYOUT */
 
-/* =========================================================
-   ATHERTON GROVE — CLEAN PROJECT LAYOUT
-   ========================================================= */
-
+/* Keep the project page compact */
 .ag-hero {
-    padding: 7vw 8vw;
-    display: grid;
-    grid-template-columns: 1fr 0.85fr;
-    gap: 6vw;
-    align-items: center;
-    border-bottom: 1px solid var(--line);
+    padding: 5vw 8vw;
+    gap: 3vw;
+    align-items: start;
 }
 
-.ag-hero h1 {
-    font-family: Manrope, Arial, sans-serif;
-    font-size: clamp(52px, 6vw, 82px);
-    line-height: 0.98;
-    letter-spacing: -0.055em;
-    margin: 0 0 20px;
-}
-
-.ag-hero h1 em {
-    font-style: normal;
-    color: #777;
-}
-
-.ag-location {
-    color: #777;
-    font-size: 13px;
-    margin: 0 0 22px;
-}
-
-.ag-hero .lead {
-    font-size: 16px;
-    line-height: 1.75;
-    max-width: 540px;
-}
-
-.ag-status {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-top: 24px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    color: #555;
-}
-
-.ag-status-dot {
-    width: 7px;
-    height: 7px;
-    background: #78866b;
-    border-radius: 50%;
-    flex: 0 0 7px;
-}
-
-.ag-hero-image {
-    min-width: 0;
-}
-
-.ag-hero-image img {
-    display: block;
+/* Reduce the main image size */
+.ag-hero img,
+.ag-hero-image img,
+.ag-hero-visual img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
+    height: 340px;
     object-fit: cover;
-    background: #dedbd4;
+    display: block;
 }
 
-.ag-hero-image > p {
-    font-size: 10px;
-    color: #777;
-    margin-top: 10px;
+/* Keep the title and project information compact */
+.ag-hero h1 {
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: 1.05;
+    margin-bottom: 18px;
 }
 
-/* PROJECT INFORMATION */
-
-.ag-meta-section {
-    padding: 4vw 8vw;
-    border-bottom: 1px solid var(--line);
+.ag-hero .ag-meta,
+.ag-meta-grid,
+.ag-project-meta {
+    gap: 12px 20px;
+    margin-top: 18px;
 }
 
-.ag-meta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px 35px;
-    margin-top: 25px;
-}
-
-.ag-meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.ag-meta-item span {
-    font-size: 9px;
-    letter-spacing: 0.13em;
-    color: var(--accent);
-}
-
-.ag-meta-item strong {
-    font-size: 13px;
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-/* PROJECT OVERVIEW */
-
+/* Project description and technical information */
+.ag-overview,
 .ag-intro {
-    padding: 7vw 8vw;
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 7vw;
-    border-bottom: 1px solid var(--line);
-}
-
-.ag-intro h2,
-.ag-contribution h2,
-.ag-gallery-heading h2,
-.ag-project-end h2 {
-    font-family: Manrope, Arial, sans-serif;
-    font-size: clamp(36px, 4vw, 54px);
-    line-height: 1.06;
-    letter-spacing: -0.04em;
-    margin: 0;
-}
-
-.ag-body-copy p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #555;
-    margin: 0 0 20px;
-}
-
-.ag-body-copy p:last-child {
-    margin-bottom: 0;
-}
-
-/* TECHNICAL CONTRIBUTION */
-
-.ag-contribution {
-    padding: 7vw 8vw;
-    background: #e8e5de;
+    padding: 40px 8vw;
 }
 
 .ag-contribution-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 25px;
-    margin-top: 45px;
+    gap: 20px;
 }
 
-.ag-contribution-grid article {
-    padding-top: 18px;
-    border-top: 1px solid #b8b4ac;
-}
-
-.ag-contribution-grid article > span {
-    font-size: 10px;
-    color: var(--accent);
-}
-
-.ag-contribution-grid h3 {
-    font: 600 17px Manrope, Arial, sans-serif;
-    margin: 17px 0 10px;
-}
-
-.ag-contribution-grid p {
-    font-size: 13px;
-    line-height: 1.75;
-    color: #555;
-    margin: 0;
-}
-
-/* IMAGE GALLERY */
-
-.ag-gallery-section {
-    padding: 7vw 8vw;
-}
-
-.ag-gallery-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 35px;
-    margin-bottom: 35px;
-}
-
-.ag-gallery-heading > p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #666;
-    max-width: 380px;
-    margin: 0;
-}
-
+/* Six images: three columns, two rows */
 .ag-gallery {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 35px 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 32px 8vw 60px;
 }
 
 .ag-gallery figure,
-.ag-gallery figure.ag-gallery-featured {
-    grid-column: auto;
-    min-width: 0;
+.ag-gallery .ag-gallery-featured {
+    grid-column: auto !important;
     margin: 0;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
 }
 
 .ag-gallery img,
-.ag-gallery-featured img {
+.ag-gallery .ag-gallery-featured img {
     display: block;
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
+    height: 100%;
+    aspect-ratio: auto;
     object-fit: cover;
-    background: #dedbd4;
 }
 
-.ag-gallery figcaption {
-    margin-top: 10px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #777;
-}
-
-.ag-gallery-note {
-    font-size: 11px;
-    line-height: 1.7;
-    color: #777;
-    margin-top: 25px;
-}
-
-/* BOTTOM NAVIGATION */
-
-.ag-project-end {
-    padding: 7vw 8vw;
-    border-top: 1px solid var(--line);
-}
-
-.ag-project-end h2 {
-    margin-bottom: 35px;
-}
-
-.ag-end-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 35px;
-}
-
-.ag-end-links a {
-    font-size: 12px;
-    font-weight: 600;
-    border-bottom: 1px solid var(--ink);
-    padding-bottom: 5px;
-}
-
-.ag-end-links a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-}
-
-/* TABLET AND MOBILE */
-
-@media (max-width: 750px) {
-
+/* Tablet */
+@media (max-width: 800px) {
     .ag-hero {
         grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 14vw 7vw;
+        padding: 32px 6vw;
     }
 
-    .ag-hero h1 {
-        font-size: clamp(50px, 12vw, 72px);
-    }
-
-    .ag-hero-image img {
-        aspect-ratio: 4 / 3;
-    }
-
-    .ag-meta-section,
-    .ag-intro,
-    .ag-contribution,
-    .ag-gallery-section,
-    .ag-project-end {
-        padding: 13vw 7vw;
-    }
-
-    .ag-meta-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px 16px;
-    }
-
-    .ag-intro {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .ag-contribution-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px 18px;
-        margin-top: 35px;
-    }
-
-    .ag-gallery-heading {
-        display: block;
-    }
-
-    .ag-gallery-heading > p {
-        margin-top: 18px;
+    .ag-hero img,
+    .ag-hero-image img,
+    .ag-hero-visual img {
+        height: 300px;
     }
 
     .ag-gallery {
-        gap: 28px 15px;
-    }
-
-    .ag-end-links {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 28px 6vw 45px;
     }
 }
 
-@media (max-width: 420px) {
-
-    .ag-contribution-grid,
+/* Mobile */
+@media (max-width: 480px) {
     .ag-gallery {
         grid-template-columns: 1fr;
+    }
+
+    .ag-hero img,
+    .ag-hero-image img,
+    .ag-hero-visual img {
+        height: 240px;
     }
 }
