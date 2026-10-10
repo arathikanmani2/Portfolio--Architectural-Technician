@@ -1304,13 +1304,16 @@ code{
    ATHERTON GROVE PROJECT PAGE
    ========================================================= */
 
-/* Project title and project information on the left;
-   main project image aligned on the right. */
+.ag-page .ag-main {
+    width: 100%;
+}
+
+/* Larger project title/details at left, main image at right. */
 .ag-page .ag-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     align-items: center;
-    gap: clamp(28px, 5vw, 72px);
+    gap: clamp(30px, 5vw, 76px);
     padding: 64px 7%;
     width: 100%;
 }
@@ -1320,7 +1323,46 @@ code{
     grid-row: 1;
     min-width: 0;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
+}
+
+.ag-page .ag-hero-content h1,
+.ag-page .ag-title {
+    font-size: clamp(42px, 5.2vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+    margin: 0 0 26px;
+    max-width: 720px;
+}
+
+.ag-page .ag-project-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 24px;
+    margin-top: 28px;
+    max-width: 620px;
+}
+
+.ag-page .ag-detail {
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    min-width: 0;
+}
+
+.ag-page .ag-detail-label {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    margin-bottom: 5px;
+}
+
+.ag-page .ag-detail-value {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .ag-page .ag-hero-image {
@@ -1328,7 +1370,7 @@ code{
     grid-row: 1;
     justify-self: end;
     width: 100%;
-    max-width: 620px;
+    max-width: 760px;
     min-width: 0;
     margin: 0;
     overflow: hidden;
@@ -1338,49 +1380,94 @@ code{
 .ag-page .ag-hero-image img {
     display: block;
     width: 100%;
-    height: clamp(280px, 34vw, 430px);
-    max-height: 430px;
+    height: clamp(340px, 39vw, 520px);
+    max-height: 520px;
     object-fit: cover;
 }
 
-/* Project description sits below the title/information and image. */
+/* Project overview spans more of the page, below the hero. */
 .ag-page .ag-intro {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
-    padding: 45px 7% 65px;
+    padding: 54px 7% 68px;
     border-top: 1px solid var(--line);
 }
 
-.ag-page .ag-intro > *,
-.ag-page .ag-intro p {
-    max-width: 900px;
+.ag-page .ag-intro-inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.ag-page .ag-intro h2,
+.ag-page .ag-contribution h2,
+.ag-page .ag-gallery-heading {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: clamp(25px, 2.8vw, 36px);
+    line-height: 1.2;
+    letter-spacing: -.025em;
+    margin: 0 0 22px;
 }
 
 .ag-page .ag-intro p {
     color: #555;
-    font-size: 17px;
-    line-height: 1.75;
+    font-size: clamp(16px, 1.35vw, 19px);
+    line-height: 1.8;
     margin: 0 0 18px;
+    max-width: 1200px;
 }
 
-/* Compact gallery: exactly three columns and two rows for six images. */
+/* Contribution content aligns to the same centered page grid. */
+.ag-page .ag-contribution {
+    padding: 56px 7% 64px;
+    border-top: 1px solid var(--line);
+}
+
+.ag-page .ag-contribution-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: clamp(0px, 3vw, 48px);
+}
+
+.ag-page .ag-contribution p,
+.ag-page .ag-contribution li {
+    max-width: 1050px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.ag-page .ag-contribution ul {
+    margin: 18px 0 0;
+    padding-left: 22px;
+}
+
+.ag-page .ag-contribution li {
+    padding-left: 4px;
+    margin-bottom: 9px;
+}
+
+/* Six larger images in a fixed 3-column, 2-row gallery. */
 .ag-page .ag-gallery-section {
-    padding: 60px 7% 75px;
+    padding: 60px 7% 78px;
     border-top: 1px solid var(--line);
 }
 
 .ag-page .ag-gallery-heading {
-    margin: 0 0 28px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
 }
 
 .ag-page .ag-gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-flow: row;
-    gap: 24px 18px;
+    gap: 28px 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     align-items: start;
 }
@@ -1397,8 +1484,8 @@ code{
 .ag-page .ag-gallery .ag-gallery-featured img {
     display: block;
     width: 100%;
-    height: 190px;
-    max-height: 190px;
+    height: 230px;
+    max-height: 230px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
@@ -1406,8 +1493,8 @@ code{
 .ag-page .ag-gallery figure figcaption {
     display: flex;
     gap: 8px;
-    padding-top: 9px;
-    font-size: 10px;
+    padding-top: 10px;
+    font-size: 11px;
     line-height: 1.5;
     color: #777;
 }
@@ -1416,44 +1503,70 @@ code{
     padding: 45px 7%;
 }
 
-/* Tablet */
 @media (max-width: 900px) {
     .ag-page .ag-hero {
         gap: 28px;
         padding: 48px 5%;
+        grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    }
+
+    .ag-page .ag-hero-content h1,
+    .ag-page .ag-title {
+        font-size: clamp(38px, 5vw, 54px);
     }
 
     .ag-page .ag-hero-image img {
-        height: 300px;
-        max-height: 300px;
+        height: 340px;
+        max-height: 340px;
+    }
+
+    .ag-page .ag-intro,
+    .ag-page .ag-contribution {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .ag-page .ag-gallery-section {
-        padding: 48px 5%;
+        padding: 48px 5% 60px;
     }
 
     .ag-page .ag-gallery {
-        gap: 18px 12px;
+        gap: 22px 14px;
     }
 
     .ag-page .ag-gallery figure img,
     .ag-page .ag-gallery .ag-gallery-featured img {
-        height: 155px;
-        max-height: 155px;
+        height: 185px;
+        max-height: 185px;
     }
 }
 
-/* Mobile: stack the hero; keep the gallery in three columns. */
 @media (max-width: 600px) {
     .ag-page .ag-hero {
         grid-template-columns: minmax(0, 1fr);
-        gap: 26px;
+        gap: 28px;
         padding: 36px 6%;
     }
 
     .ag-page .ag-hero-content {
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .ag-page .ag-hero-content h1,
+    .ag-page .ag-title {
+        font-size: clamp(40px, 11vw, 54px);
+        margin-bottom: 22px;
+    }
+
+    .ag-page .ag-project-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 16px;
+        margin-top: 22px;
+    }
+
+    .ag-page .ag-detail-value {
+        font-size: 13px;
     }
 
     .ag-page .ag-hero-image {
@@ -1464,36 +1577,43 @@ code{
     }
 
     .ag-page .ag-hero-image img {
-        height: 250px;
-        max-height: 250px;
+        height: 270px;
+        max-height: 270px;
     }
 
-    .ag-page .ag-intro {
-        padding: 38px 6% 45px;
+    .ag-page .ag-intro,
+    .ag-page .ag-contribution {
+        padding: 40px 6% 48px;
     }
 
-    .ag-page .ag-intro p {
+    .ag-page .ag-contribution-inner {
+        padding-left: 0;
+    }
+
+    .ag-page .ag-intro p,
+    .ag-page .ag-contribution p,
+    .ag-page .ag-contribution li {
         font-size: 15px;
     }
 
     .ag-page .ag-gallery-section {
-        padding: 38px 6% 48px;
+        padding: 40px 6% 50px;
     }
 
     .ag-page .ag-gallery {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px 8px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
     }
 
     .ag-page .ag-gallery figure img,
     .ag-page .ag-gallery .ag-gallery-featured img {
-        height: 100px;
-        max-height: 100px;
+        height: 145px;
+        max-height: 145px;
     }
 
     .ag-page .ag-gallery figure figcaption {
         display: block;
-        font-size: 9px;
+        font-size: 10px;
         overflow-wrap: anywhere;
     }
 }
