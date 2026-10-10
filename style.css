@@ -1304,21 +1304,26 @@ code{
    ATHERTON GROVE PROJECT PAGE
    ========================================================= */
 
+
+/* =========================================================
+   ATHERTON GROVE — CLEAN PROJECT LAYOUT
+   ========================================================= */
+
 .ag-hero {
-    padding: 8vw;
+    padding: 7vw 8vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 7vw;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 6vw;
     align-items: center;
     border-bottom: 1px solid var(--line);
 }
 
 .ag-hero h1 {
     font-family: Manrope, Arial, sans-serif;
-    font-size: clamp(64px, 8vw, 112px);
-    line-height: .92;
-    letter-spacing: -.06em;
-    margin: 0 0 25px;
+    font-size: clamp(52px, 6vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    margin: 0 0 20px;
 }
 
 .ag-hero h1 em {
@@ -1328,21 +1333,23 @@ code{
 
 .ag-location {
     color: #777;
-    font-size: 14px;
-    margin-bottom: 25px;
+    font-size: 13px;
+    margin: 0 0 22px;
 }
 
 .ag-hero .lead {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 540px;
 }
 
 .ag-status {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 30px;
+    gap: 9px;
+    margin-top: 24px;
     font-size: 10px;
-    letter-spacing: .1em;
+    letter-spacing: 0.08em;
     color: #555;
 }
 
@@ -1359,53 +1366,59 @@ code{
 }
 
 .ag-hero-image img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     background: #dedbd4;
 }
 
 .ag-hero-image > p {
     font-size: 10px;
     color: #777;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
+/* PROJECT INFORMATION */
+
 .ag-meta-section {
-    padding: 5vw 8vw;
+    padding: 4vw 8vw;
     border-bottom: 1px solid var(--line);
 }
 
 .ag-meta-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px 40px;
-    margin-top: 30px;
+    gap: 25px 35px;
+    margin-top: 25px;
 }
 
 .ag-meta-item {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 5px;
 }
 
 .ag-meta-item span {
     font-size: 9px;
-    letter-spacing: .14em;
+    letter-spacing: 0.13em;
     color: var(--accent);
 }
 
 .ag-meta-item strong {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.6;
     font-weight: 500;
 }
 
+/* PROJECT OVERVIEW */
+
 .ag-intro {
-    padding: 9vw 8vw;
+    padding: 7vw 8vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8vw;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 7vw;
     border-bottom: 1px solid var(--line);
 }
 
@@ -1414,112 +1427,108 @@ code{
 .ag-gallery-heading h2,
 .ag-project-end h2 {
     font-family: Manrope, Arial, sans-serif;
-    font-size: clamp(38px, 5vw, 66px);
-    line-height: 1.03;
-    letter-spacing: -.045em;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
     margin: 0;
 }
 
 .ag-body-copy p {
-    font-size: 16px;
-    line-height: 1.85;
+    font-size: 15px;
+    line-height: 1.8;
     color: #555;
-    margin: 0 0 24px;
+    margin: 0 0 20px;
 }
 
 .ag-body-copy p:last-child {
     margin-bottom: 0;
 }
 
-.ag-contribution {
-    padding: 9vw 8vw;
-    background: #e8e5de;
-}
+/* TECHNICAL CONTRIBUTION */
 
-.ag-contribution h2 {
-    max-width: 760px;
+.ag-contribution {
+    padding: 7vw 8vw;
+    background: #e8e5de;
 }
 
 .ag-contribution-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
-    margin-top: 65px;
+    gap: 25px;
+    margin-top: 45px;
 }
 
 .ag-contribution-grid article {
-    padding-top: 20px;
+    padding-top: 18px;
     border-top: 1px solid #b8b4ac;
 }
 
 .ag-contribution-grid article > span {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--accent);
 }
 
 .ag-contribution-grid h3 {
-    font: 600 19px Manrope, Arial, sans-serif;
-    margin: 22px 0 12px;
+    font: 600 17px Manrope, Arial, sans-serif;
+    margin: 17px 0 10px;
 }
 
 .ag-contribution-grid p {
-    font-size: 14px;
-    color: #555;
+    font-size: 13px;
     line-height: 1.75;
+    color: #555;
     margin: 0;
 }
 
+/* IMAGE GALLERY */
+
 .ag-gallery-section {
-    padding: 9vw 8vw;
+    padding: 7vw 8vw;
 }
 
 .ag-gallery-heading {
-    display: grid;
-    grid-template-columns: 1fr .7fr;
-    gap: 6vw;
+    display: flex;
+    justify-content: space-between;
     align-items: end;
-    margin-bottom: 50px;
+    gap: 35px;
+    margin-bottom: 35px;
 }
 
 .ag-gallery-heading > p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.7;
     color: #666;
-    max-width: 440px;
-    margin: 0 0 5px;
+    max-width: 380px;
+    margin: 0;
 }
 
 .ag-gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 45px 28px;
+    gap: 35px 25px;
 }
 
-.ag-gallery figure {
+.ag-gallery figure,
+.ag-gallery figure.ag-gallery-featured {
+    grid-column: auto;
     min-width: 0;
     margin: 0;
 }
 
-.ag-gallery figure.ag-gallery-featured {
-    grid-column: span 2;
-}
-
-.ag-gallery img {
+.ag-gallery img,
+.ag-gallery-featured img {
     display: block;
     width: 100%;
-    height: 340px;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     background: #dedbd4;
 }
 
-.ag-gallery-featured img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-
 .ag-gallery figcaption {
-    margin-top: 13px;
+    margin-top: 10px;
     font-size: 10px;
-    letter-spacing: .1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #777;
 }
@@ -1528,29 +1537,31 @@ code{
     font-size: 11px;
     line-height: 1.7;
     color: #777;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
+/* BOTTOM NAVIGATION */
+
 .ag-project-end {
-    padding: 9vw 8vw;
+    padding: 7vw 8vw;
     border-top: 1px solid var(--line);
 }
 
 .ag-project-end h2 {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
 .ag-end-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px 40px;
+    gap: 20px 35px;
 }
 
 .ag-end-links a {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     border-bottom: 1px solid var(--ink);
-    padding-bottom: 6px;
+    padding-bottom: 5px;
 }
 
 .ag-end-links a:hover {
@@ -1558,20 +1569,18 @@ code{
     border-color: var(--accent);
 }
 
+/* TABLET AND MOBILE */
+
 @media (max-width: 750px) {
 
     .ag-hero {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 18vw 7vw;
+        gap: 30px;
+        padding: 14vw 7vw;
     }
 
     .ag-hero h1 {
-        font-size: clamp(62px, 17vw, 88px);
-    }
-
-    .ag-hero .lead {
-        font-size: 16px;
+        font-size: clamp(50px, 12vw, 72px);
     }
 
     .ag-hero-image img {
@@ -1583,42 +1592,35 @@ code{
     .ag-contribution,
     .ag-gallery-section,
     .ag-project-end {
-        padding: 16vw 7vw;
+        padding: 13vw 7vw;
     }
 
     .ag-meta-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px 18px;
+        gap: 22px 16px;
     }
 
     .ag-intro {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 25px;
     }
 
     .ag-contribution-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px 22px;
-        margin-top: 45px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+        margin-top: 35px;
     }
 
     .ag-gallery-heading {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-bottom: 35px;
+        display: block;
+    }
+
+    .ag-gallery-heading > p {
+        margin-top: 18px;
     }
 
     .ag-gallery {
-        gap: 32px 16px;
-    }
-
-    .ag-gallery img {
-        height: 220px;
-    }
-
-    .ag-gallery-featured img {
-        height: auto;
-        aspect-ratio: 4 / 3;
+        gap: 28px 15px;
     }
 
     .ag-end-links {
@@ -1629,22 +1631,8 @@ code{
 
 @media (max-width: 420px) {
 
-    .ag-contribution-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .ag-contribution-grid,
     .ag-gallery {
         grid-template-columns: 1fr;
     }
-
-    .ag-gallery figure.ag-gallery-featured {
-        grid-column: auto;
-    }
-
-    .ag-gallery img {
-        height: auto;
-        aspect-ratio: 4 / 3;
-    }
 }
-```
-
