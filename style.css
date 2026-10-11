@@ -1845,3 +1845,9 @@ code{
   }
 }
 ```
+```css
+/* More space between technical design projects */
+.project {
+    margin-bottom: 45px;
+}
+```
