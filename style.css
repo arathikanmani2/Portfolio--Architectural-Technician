@@ -1849,3 +1849,205 @@ code{
 }
 ```
 /* More space between technical design projects */ .project { margin-bottom: 45px; }
+/* ==========================================
+   TECHNICAL DESIGN PROJECTS PAGE
+   Matching Architectural Projects layout
+   ========================================== */
+
+.technical-design-page .project-list-hero {
+    padding-bottom: 55px;
+}
+
+/* Project list */
+
+.technical-design-page .technical-project-list {
+    padding: 0 8vw 70px;
+}
+
+/* Individual project row */
+
+.technical-design-page .technical-project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line, #dedbd4);
+
+    color: inherit;
+    text-decoration: none;
+}
+
+/* First project starts closer to the heading */
+
+.technical-design-page .technical-project-card:first-child {
+    padding-top: 10px;
+}
+
+/* Project image */
+
+.technical-design-page .technical-project-image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    background: #dedbd4;
+}
+
+.technical-design-page .technical-project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.technical-design-page .technical-project-card:hover
+.technical-project-image img {
+    transform: scale(1.025);
+}
+
+/* Project information */
+
+.technical-design-page .technical-project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    min-width: 0;
+    padding: 10px 0;
+}
+
+.technical-design-page .technical-project-heading .project-number {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: #777;
+}
+
+.technical-design-page .technical-project-heading .eyebrow {
+    margin-bottom: 12px;
+}
+
+.technical-design-page .technical-project-heading h2 {
+    margin: 0;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.technical-design-page .technical-project-description p {
+    max-width: 470px;
+    margin: 0 0 22px;
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text, #444);
+}
+
+.technical-design-page .technical-project-description .project-view {
+    display: inline-block;
+    font-size: 12px;
+    border-bottom: 1px solid var(--line, #dedbd4);
+    padding-bottom: 5px;
+    transition: opacity 0.2s ease;
+}
+
+.technical-design-page .technical-project-card:hover .project-view {
+    opacity: 0.6;
+}
+
+/* Professional experience note */
+
+.technical-design-page .technical-project-note {
+    padding: 75px 12vw 90px;
+    border-top: 1px solid var(--line, #dedbd4);
+}
+
+.technical-design-page .technical-project-note h2 {
+    margin: 20px 0;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.technical-design-page .technical-project-note > p:last-child {
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text, #444);
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+
+    .technical-design-page .technical-project-list {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .technical-design-page .technical-project-card {
+        gap: 25px;
+    }
+
+    .technical-design-page .technical-project-image {
+        height: 280px;
+    }
+
+    .technical-design-page .technical-project-heading h2 {
+        font-size: 30px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .technical-design-page .technical-project-list {
+        padding-left: 6vw;
+        padding-right: 6vw;
+        padding-bottom: 45px;
+    }
+
+    .technical-design-page .technical-project-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 30px 0;
+    }
+
+    .technical-design-page .technical-project-card:first-child {
+        padding-top: 0;
+    }
+
+    .technical-design-page .technical-project-image {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .technical-design-page .technical-project-info {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .technical-design-page .technical-project-heading .project-number {
+        margin-bottom: 12px;
+    }
+
+    .technical-design-page .technical-project-heading h2 {
+        font-size: 32px;
+    }
+
+    .technical-design-page .technical-project-description p {
+        font-size: 13px;
+    }
+
+    .technical-design-page .technical-project-note {
+        padding: 50px 8vw 60px;
+    }
+
+}
