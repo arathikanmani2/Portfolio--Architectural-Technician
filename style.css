@@ -1846,8 +1846,9 @@ code{
 }
 ```
 ```css
-/* Spacing between project grid items */
-.project-grid {
-    row-gap: 55px;
-    column-gap: 35px;
+```css
+/* More space between technical design projects */
+.project {
+    margin-bottom: 45px;
 }
+```
