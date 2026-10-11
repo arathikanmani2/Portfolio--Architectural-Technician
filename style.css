@@ -2204,3 +2204,20 @@ code{
     line-height: 1.7;
     margin: 0;
 }
+
+/* Atherton Grove — smaller selected images heading */
+
+.ag-page .ag-gallery-heading h2 {
+    font-size: clamp(25px, 2.5vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin: 12px 0 0;
+}
+
+.ag-page .ag-gallery-description {
+    max-width: 340px;
+    font-size: 11px;
+    line-height: 1.65;
+    color: var(--text, #444);
+    margin: 0;
+}
