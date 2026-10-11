@@ -229,11 +229,13 @@ h2{
     color:#777
 }
 
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:55px 28px
+```css
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 75px 40px;
 }
+```
 
 .project{
     display:block
@@ -744,11 +746,12 @@ code{
         font-size:45px
     }
 
-    .project-grid{
-        grid-template-columns:1fr;
-        gap:45px
-    }
-
+   ```css
+.project-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+}
+```
     .project.featured{
         grid-column:auto
     }
