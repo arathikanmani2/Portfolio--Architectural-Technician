@@ -1617,3 +1617,231 @@ code{
         overflow-wrap: anywhere;
     }
 }
+```css
+/* =========================================
+   SANDBANK POINT PROJECT PAGE
+   ========================================= */
+
+.sandbank-point-page .sandbank-project {
+  width: 84%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 65px 0 55px;
+}
+
+/* Title and main image layout */
+
+.sandbank-point-page .sandbank-intro {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.sandbank-point-page .sandbank-info {
+  min-width: 0;
+}
+
+.sandbank-point-page .sandbank-eyebrow {
+  margin: 0 0 18px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  line-height: 1.7;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.sandbank-point-page .sandbank-info h1 {
+  margin: 0 0 32px;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+
+/* Project information */
+
+.sandbank-point-page .sandbank-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 17px;
+}
+
+.sandbank-point-page .sandbank-meta-item {
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--line, #dedbd4);
+  min-width: 0;
+}
+
+.sandbank-point-page .sandbank-meta-item span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: #777;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sandbank-point-page .sandbank-meta-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: inherit;
+}
+
+/* Main image on the right */
+
+.sandbank-point-page .sandbank-main-image {
+  width: 100%;
+  height: 430px;
+  margin: 0;
+  overflow: hidden;
+  background: #e8e5df;
+}
+
+.sandbank-point-page .sandbank-main-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Project description below the intro */
+
+.sandbank-point-page .sandbank-overview {
+  max-width: 760px;
+  margin: 58px 0 45px;
+}
+
+.sandbank-point-page .sandbank-overview h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.sandbank-point-page .sandbank-overview p {
+  margin: 0 0 15px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--text, #444);
+}
+
+/* Three supporting images in a single row */
+
+.sandbank-point-page .sandbank-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.sandbank-point-page .sandbank-gallery img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  background: #e8e5df;
+}
+
+/* Back link */
+
+.sandbank-point-page .sandbank-back {
+  display: inline-block;
+  margin-top: 38px;
+  font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line, #dedbd4);
+  padding-bottom: 5px;
+}
+
+.sandbank-point-page .sandbank-back:hover {
+  opacity: 0.65;
+}
+
+/* Tablet layout */
+
+@media (max-width: 900px) {
+  .sandbank-point-page .sandbank-project {
+    width: 88%;
+    padding-top: 45px;
+  }
+
+  .sandbank-point-page .sandbank-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .sandbank-point-page .sandbank-main-image {
+    height: 360px;
+  }
+
+  .sandbank-point-page .sandbank-meta {
+    column-gap: 15px;
+  }
+
+  .sandbank-point-page .sandbank-gallery {
+    gap: 12px;
+  }
+
+  .sandbank-point-page .sandbank-gallery img {
+    height: 180px;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .sandbank-point-page .sandbank-project {
+    width: 90%;
+    padding-top: 35px;
+  }
+
+  .sandbank-point-page .sandbank-intro {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .sandbank-point-page .sandbank-info h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .sandbank-point-page .sandbank-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sandbank-point-page .sandbank-main-image {
+    height: 300px;
+  }
+
+  .sandbank-point-page .sandbank-overview {
+    margin-top: 38px;
+    margin-bottom: 30px;
+  }
+
+  .sandbank-point-page .sandbank-overview h2 {
+    font-size: 22px;
+  }
+
+  .sandbank-point-page .sandbank-overview p {
+    font-size: 13px;
+  }
+
+  .sandbank-point-page .sandbank-gallery {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sandbank-point-page .sandbank-gallery img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
+```
