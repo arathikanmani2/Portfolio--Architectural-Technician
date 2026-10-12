@@ -1960,3 +1960,59 @@ code{
     .technical-design-page .technical-project-description p { font-size: 13px; }
     .technical-design-page .technical-project-note { padding: 45px 8vw 55px; }
 }
+
+/* ========================================
+   GLENTRESS FOREST PROJECT
+   ======================================== */
+
+/* Two supporting images, balanced side by side */
+.glentress-page .ag-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.glentress-page .ag-gallery figure {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.glentress-page .ag-gallery figure img {
+    display: block;
+    width: 100%;
+    height: clamp(220px, 28vw, 360px);
+    max-height: 360px;
+    object-fit: cover;
+}
+
+/* Keep the gallery heading aligned with its images */
+.glentress-page .ag-gallery-heading {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    box-sizing: border-box;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .glentress-page .ag-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .glentress-page .ag-gallery figure img {
+        height: auto;
+        max-height: none;
+        aspect-ratio: 3 / 2;
+    }
+
+    .glentress-page .ag-gallery-heading {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+}
