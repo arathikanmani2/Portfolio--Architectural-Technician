@@ -2408,3 +2408,228 @@ code{
         padding: 24px 6%;
     }
 }
+
+/* =========================================================
+   BIM & DIGITAL WORKFLOWS — LISTING PAGE
+   ========================================================= */
+
+.bim-workflows-page {
+    --bim-list-line: var(--line, #dedbd4);
+    color: #252525;
+}
+
+.bim-workflows-page .bim-list-hero {
+    padding: 78px 12% 68px;
+}
+
+.bim-workflows-page .bim-list-eyebrow {
+    margin: 0 0 24px;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: .13em;
+    color: #777;
+}
+
+.bim-workflows-page .bim-list-hero h1 {
+    margin: 0 0 26px;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: .99;
+    letter-spacing: -.06em;
+    font-weight: 500;
+}
+
+.bim-workflows-page .bim-list-intro {
+    max-width: 570px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.bim-workflows-page .bim-project-list {
+    width: 76%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 12px 0 75px;
+}
+
+.bim-workflows-page .bim-project-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(28px, 4.5vw, 66px);
+    padding: 36px 0 48px;
+    border-top: 1px solid var(--bim-list-line);
+}
+
+.bim-workflows-page .bim-card-image {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    background: #eeede9;
+}
+
+.bim-workflows-page .bim-card-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .4s ease;
+}
+
+.bim-workflows-page .bim-card-image:hover img {
+    transform: scale(1.025);
+}
+
+.bim-workflows-page .bim-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    min-width: 0;
+}
+
+.bim-workflows-page .bim-card-number {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: .08em;
+    color: #888;
+}
+
+.bim-workflows-page .bim-card-category {
+    margin: 0 0 12px;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: .1em;
+    color: #777;
+}
+
+.bim-workflows-page .bim-card-heading h2 {
+    margin: 0;
+    font-size: clamp(30px, 3.2vw, 43px);
+    line-height: 1.12;
+    letter-spacing: -.04em;
+    font-weight: 500;
+}
+
+.bim-workflows-page .bim-card-heading h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bim-workflows-page .bim-card-heading h2 a:hover {
+    opacity: .7;
+}
+
+.bim-workflows-page .bim-card-subtitle {
+    margin: 13px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.bim-workflows-page .bim-card-description p {
+    max-width: 520px;
+    margin: 0 0 17px;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #555;
+}
+
+.bim-workflows-page .bim-card-description .bim-card-software {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #777;
+}
+
+.bim-workflows-page .bim-card-link {
+    display: inline-block;
+    margin-top: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #999;
+    color: #252525;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.bim-workflows-page .bim-card-link span {
+    display: inline-block;
+    margin-left: 7px;
+    transition: transform .2s ease;
+}
+
+.bim-workflows-page .bim-card-link:hover span {
+    transform: translate(3px, -2px);
+}
+
+.bim-workflows-page .bim-list-footer {
+    padding: 26px 12%;
+    border-top: 1px solid var(--bim-list-line);
+}
+
+.bim-workflows-page .bim-list-footer a {
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+
+.bim-workflows-page .bim-list-footer a:hover {
+    color: #111;
+}
+
+@media (max-width: 850px) {
+    .bim-workflows-page .bim-list-hero {
+        padding: 58px 8% 48px;
+    }
+
+    .bim-workflows-page .bim-project-list {
+        width: 84%;
+    }
+
+    .bim-workflows-page .bim-project-card {
+        gap: 28px;
+    }
+
+    .bim-workflows-page .bim-card-heading h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bim-workflows-page .bim-list-hero {
+        padding: 45px 6% 38px;
+    }
+
+    .bim-workflows-page .bim-list-hero h1 {
+        font-size: 48px;
+    }
+
+    .bim-workflows-page .bim-project-list {
+        width: 88%;
+        padding-bottom: 48px;
+    }
+
+    .bim-workflows-page .bim-project-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px 0 36px;
+    }
+
+    .bim-workflows-page .bim-card-image img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .bim-workflows-page .bim-card-info {
+        gap: 20px;
+    }
+
+    .bim-workflows-page .bim-card-heading h2 {
+        font-size: 35px;
+    }
+
+    .bim-workflows-page .bim-list-footer {
+        padding: 24px 6%;
+    }
+}
