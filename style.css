@@ -2125,13 +2125,24 @@ code{
     background: #f0efec;
 }
 
+
+.bim-project-page .bim-hero-image {
+    width: 100%;
+    max-width: 650px;
+    min-width: 0;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
+}
+
 .bim-project-page .bim-hero-image img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 650 / 816;
+    max-height: none;
+    aspect-ratio: auto;
     object-fit: contain;
-    object-position: center top;
+    object-position: center;
 }
 
 /* Project overview */
